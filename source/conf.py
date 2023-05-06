@@ -25,7 +25,7 @@ exclude_patterns = []
 
 html_theme = "furo"
 html_static_path = ["_static"]
-html_title = "Tales of Price Zuko"
+html_title = "Tales of Prince Zuko"
 html_theme_options = {
     "footer_icons": [
         {

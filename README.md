@@ -1,4 +1,4 @@
-# Tales of Price Zuko
+# Tales of Prince Zuko
 
 ## Description
 
