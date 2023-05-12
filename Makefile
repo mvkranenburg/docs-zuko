@@ -8,6 +8,8 @@ SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = source
 BUILDDIR      = build
 
+PROJECT       = zuko
+
 help:
 	@echo "Please use 'make <target>' where <target> is one of"
 	@echo "  html       to make standalone HTML files"
@@ -15,10 +17,8 @@ help:
 
 clean: sphinx-clean
 html: sphinx-html
-	@for d in $(BUILDDIR)/$@/*/ ; do \
-		echo "\nCompressing pages in $${d%/}.zip" ; \
-		zip -jr $${d%/}.zip $${d} ; \
-	done
+	@echo "\nCompressing pages in ${BUILDDIR}/$@/$(PROJECT).zip"
+	@zip -jr ${BUILDDIR}/$@/$(PROJECT).zip ${BUILDDIR}/$@/$(PROJECT)
 
 sphinx-%: Makefile
 	@$(SPHINXBUILD) -M $* "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)

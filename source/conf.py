@@ -16,7 +16,10 @@ release = "0.1"
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = [
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.autosectionlabel",
+]
 
 templates_path = ["_templates"]
 exclude_patterns = []
@@ -27,6 +30,8 @@ exclude_patterns = []
 
 html_theme = "furo"
 html_title = "Tales of Prince Zuko"
+html_copy_source = False
+html_show_sourcelink = False
 html_theme_options = {
     "footer_icons": [
         {
